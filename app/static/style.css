@@ -1,0 +1,177 @@
+/* ─────────────────────────────────────────────
+   GLOBAL STYLES
+───────────────────────────────────────────── */
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f4f7fb;
+    color: #333;
+}
+
+.container {
+    width: 85%;
+    margin: 30px auto;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+/* ─────────────────────────────────────────────
+   CARDS
+───────────────────────────────────────────── */
+
+.card {
+    background: #ffffff;
+    padding: 20px 25px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+.card h2 {
+    margin-top: 0;
+    color: #34495e;
+}
+
+/* ─────────────────────────────────────────────
+   SELECT + BUTTON
+───────────────────────────────────────────── */
+
+select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* ─────────────────────────────────────────────
+   RESULT BOX
+───────────────────────────────────────────── */
+
+#result {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 8px;
+    background: #ecf3ff;
+    border-left: 5px solid #007bff;
+}
+
+/* ─────────────────────────────────────────────
+   TIMELINE (AUDIT TRAIL)
+───────────────────────────────────────────── */
+
+#logs {
+    max-height: 500px;
+    overflow-y: auto;
+    position: relative;
+    padding-left: 30px;
+}
+
+/* Vertical line */
+#logs::before {
+    content: "";
+    position: absolute;
+    left: 12px;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background: #dcdcdc;
+}
+
+/* Log card (timeline item) */
+.log-card {
+    position: relative;
+    background: #ffffff;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    font-size: 14px;
+    animation: fadeIn 0.4s ease;
+}
+
+/* Timeline dot */
+.log-card::before {
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: 15px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #999;
+}
+
+/* Different colors per event */
+.ticket { border-left: 5px solid #3498db; }
+.ticket::before { background: #3498db; }
+
+.classification { border-left: 5px solid #9b59b6; }
+.classification::before { background: #9b59b6; }
+
+.decision { border-left: 5px solid #f39c12; }
+.decision::before { background: #f39c12; }
+
+.tool { border-left: 5px solid #2ecc71; }
+.tool::before { background: #2ecc71; }
+
+.result { border-left: 5px solid #16a085; }
+.result::before { background: #16a085; }
+
+.error { border-left: 5px solid #e74c3c; }
+.error::before { background: #e74c3c; }
+
+/* ─────────────────────────────────────────────
+   ANIMATION
+───────────────────────────────────────────── */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ─────────────────────────────────────────────
+   SCROLLBAR
+───────────────────────────────────────────── */
+
+#logs::-webkit-scrollbar {
+    width: 6px;
+}
+
+#logs::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+}
