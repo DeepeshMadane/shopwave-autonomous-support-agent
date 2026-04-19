@@ -6,3 +6,4 @@ anthropic>=0.40.0
 fastapi
 uvicorn
 jinja2
+python-multipart
