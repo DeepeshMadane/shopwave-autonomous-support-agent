@@ -97,22 +97,6 @@ ThreadPoolExecutor(max_workers=2)
 
 ---
 
-## 📸 Screenshots
-
-### UI
-
-![UI](assets/ui.png)
-
-### Audit Trail
-
-![Audit](assets/audit.png)
-
-### Concurrency
-
-![Concurrency](assets/concurrency.png)
-
----
-
 ## ▶️ Run Locally
 
 ```
