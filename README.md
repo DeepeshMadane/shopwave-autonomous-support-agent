@@ -154,10 +154,4 @@ uvicorn app.api:app --reload
 
 ---
 
-## 🏆 Hackathon Alignment
 
-* Autonomous agent (not chatbot)
-* Multi-step reasoning
-* Real-world business logic
-* Concurrent processing
-* Full explainability
