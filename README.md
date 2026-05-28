@@ -79,7 +79,6 @@ Tickets are processed in parallel using:
 ```
 ThreadPoolExecutor(max_workers=2)
 ```
-
 ---
 
 ## 🌐 Web UI
